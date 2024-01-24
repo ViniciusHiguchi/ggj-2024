@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d14o8o8kfyaix"
-path="res://.godot/imported/panelCard42X64.png-fea092f7b31339005707524abcc1be60.ctex"
+path="res://.godot/imported/panelCard42X64.png-dbeaa8fdee5b6a4bb4a231ad257038ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art-packs/GUI/panelCard42X64.png"
-dest_files=["res://.godot/imported/panelCard42X64.png-fea092f7b31339005707524abcc1be60.ctex"]
+source_file="res://assets/art-packs/gui_blue/panelCard42X64.png"
+dest_files=["res://.godot/imported/panelCard42X64.png-dbeaa8fdee5b6a4bb4a231ad257038ca.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvipw061pb8je"
-path="res://.godot/imported/panelHealthLife64X16.png-87cc47ff0a91d3a70095ea65ead7a71c.ctex"
+uid="uid://cvrt3cf6hdup"
+path="res://.godot/imported/clean_margin_1.png-1987e9c4aa8062014ae3cb5bfb5973a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art-packs/gui_blue/panelHealthLife64X16.png"
-dest_files=["res://.godot/imported/panelHealthLife64X16.png-87cc47ff0a91d3a70095ea65ead7a71c.ctex"]
+source_file="res://assets/art-packs/gui_paper/clean_margin_1.png"
+dest_files=["res://.godot/imported/clean_margin_1.png-1987e9c4aa8062014ae3cb5bfb5973a4.ctex"]
 
 [params]
 
