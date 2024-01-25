@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://d35po2xhywgq5"]
+
+[ext_resource type="Script" path="res://scripts/map/map_control.gd" id="1_5jdrm"]
+[ext_resource type="PackedScene" uid="uid://css6c85r7o1mw" path="res://assets_scenes/node.tscn" id="2_0i2ym"]
+[ext_resource type="PackedScene" uid="uid://bey885wf1ixgj" path="res://assets_scenes/edge.tscn" id="3_vbym7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5jdrm")
+
+[node name="TextureRect" parent="." instance=ExtResource("3_vbym7")]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 213.0
+offset_right = 542.0
+offset_bottom = 227.0
+
+[node name="Button2" parent="." instance=ExtResource("2_0i2ym")]
+layout_mode = 0
+offset_left = 1117.0
+offset_top = 542.0
+offset_right = 1200.0
+offset_bottom = 656.0
+
+[node name="Button" parent="." instance=ExtResource("2_0i2ym")]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 414.0
+offset_right = 349.0
+offset_bottom = 528.0

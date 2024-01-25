@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bey885wf1ixgj"]
+
+[ext_resource type="Texture2D" uid="uid://d31054og6v54l" path="res://assets/art-packs/gui_blue/button64X14.png" id="1_jubtf"]
+[ext_resource type="Script" path="res://scripts/map/arrow.gd" id="2_gn202"]
+
+[node name="TextureRect" type="TextureRect"]
+texture_filter = 1
+offset_right = 282.0
+offset_bottom = 14.0
+texture = ExtResource("1_jubtf")
+script = ExtResource("2_gn202")

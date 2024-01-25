@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://css6c85r7o1mw"]
+
+[ext_resource type="Texture2D" uid="uid://bbeq2yhfpkq2c" path="res://assets/art-packs/gui_paper/clean_margin_3.png" id="1_m3wup"]
+
+[node name="Button" type="Button"]
+texture_filter = 1
+offset_right = 83.0
+offset_bottom = 114.0
+action_mode = 0
+button_mask = 0
+icon = ExtResource("1_m3wup")
+icon_alignment = 1
+expand_icon = true
