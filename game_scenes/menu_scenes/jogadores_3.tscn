@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpmmni4s8nq4h"]
+
+[ext_resource type="Script" path="res://scripts/menu_scripts/jogadores_3.gd" id="1_musva"]
+
+[node name="Jogadores_3" type="CanvasLayer"]
+script = ExtResource("1_musva")

@@ -1,0 +1,96 @@
+[gd_scene load_steps=2 format=3 uid="uid://j47o3w1nlrmw"]
+
+[ext_resource type="Script" path="res://scripts/menu_scripts/in_game_menu.gd" id="1_6ybow"]
+
+[node name="InGameMenu" type="CanvasLayer"]
+script = ExtResource("1_6ybow")
+
+[node name="Mapa" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.015
+anchor_right = 0.048
+anchor_bottom = 0.015
+offset_left = -61.44
+offset_top = -10.8
+offset_right = 60.56
+offset_bottom = 10.2
+theme_override_font_sizes/font_size = 20
+text = "Mapa"
+
+[node name="Jogadores_1" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.156
+anchor_top = 0.015
+anchor_right = 0.156
+anchor_bottom = 0.015
+offset_left = -75.68
+offset_top = -9.8
+offset_right = 76.32
+offset_bottom = 10.2
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "Jogador 1"
+
+[node name="Jogadores_2" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.277
+anchor_top = 0.015
+anchor_right = 0.277
+anchor_bottom = 0.015
+offset_left = -76.56
+offset_top = -9.8
+offset_right = 75.44
+offset_bottom = 10.2
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "Jogador 2"
+
+[node name="Jogadores_3" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.397
+anchor_top = 0.015
+anchor_right = 0.397
+anchor_bottom = 0.015
+offset_left = -76.16
+offset_top = -9.8
+offset_right = 75.84
+offset_bottom = 10.2
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "Jogador 3"
+
+[node name="Jogadores_4" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.518
+anchor_top = 0.015
+anchor_right = 0.518
+anchor_bottom = 0.015
+offset_left = -76.04
+offset_top = -9.8
+offset_right = 75.96
+offset_bottom = 10.2
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
+text = "Jogador 4"
+
+[node name="Help" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.983
+anchor_top = 0.022
+anchor_right = 0.983
+anchor_bottom = 0.022
+offset_left = 13.76
+offset_top = -15.84
+offset_right = 21.76
+offset_bottom = -7.84
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "Help"
+
+[connection signal="pressed" from="Mapa" to="." method="_on_mapa_pressed"]
+[connection signal="pressed" from="Jogadores_1" to="." method="_on_jogadores_pressed"]
+[connection signal="pressed" from="Jogadores_2" to="." method="_on_jogadores_pressed"]
+[connection signal="pressed" from="Jogadores_3" to="." method="_on_jogadores_pressed"]
+[connection signal="pressed" from="Jogadores_4" to="." method="_on_jogadores_pressed"]
+[connection signal="pressed" from="Help" to="." method="_on_help_pressed"]

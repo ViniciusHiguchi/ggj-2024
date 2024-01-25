@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1moftkaso1yw"]
+
+[ext_resource type="Script" path="res://scripts/menu_scripts/help_page.gd" id="1_bvi7j"]
+
+[node name="HelpPage" type="CanvasLayer"]
+script = ExtResource("1_bvi7j")
+
+[node name="Voltar" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -174.0
+offset_top = -83.0
+offset_right = 173.0
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Voltar"
+
+[connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]

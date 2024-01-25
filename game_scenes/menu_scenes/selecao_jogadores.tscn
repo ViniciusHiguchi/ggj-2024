@@ -1,0 +1,83 @@
+[gd_scene load_steps=2 format=3 uid="uid://hg361m4bqgdd"]
+
+[ext_resource type="Script" path="res://scripts/menu_scripts/selecao_jogadores.gd" id="1_5g85c"]
+
+[node name="SelecaoJogadores" type="CanvasLayer"]
+script = ExtResource("1_5g85c")
+
+[node name="Titulo" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -443.0
+offset_right = 443.0
+offset_bottom = 115.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 70
+text = "Selecione o número de jogadores"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumeroJogadores" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -128.0
+offset_right = 26.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "2"
+
+[node name="Confirmar" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -173.0
+offset_top = -206.0
+offset_right = 179.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 100
+text = "Confirmar"
+
+[node name="Diminui" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.42
+anchor_top = 0.424
+anchor_right = 0.42
+anchor_bottom = 0.424
+offset_left = -56.6
+offset_top = -53.28
+offset_right = 56.4
+offset_bottom = 52.72
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 65
+text = "<"
+
+[node name="Aumenta" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.578
+anchor_top = 0.424
+anchor_right = 0.578
+anchor_bottom = 0.425
+offset_left = -56.84
+offset_top = -52.28
+offset_right = 56.16
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 65
+text = ">"
+
+[connection signal="pressed" from="Confirmar" to="." method="_on_confirmar_pressed"]
+[connection signal="pressed" from="Diminui" to="." method="_on_diminui_pressed"]
+[connection signal="pressed" from="Aumenta" to="." method="_on_aumenta_pressed"]
