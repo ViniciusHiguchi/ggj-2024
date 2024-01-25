@@ -1,6 +1,38 @@
 [gd_scene load_steps=2 format=3 uid="uid://bpmmni4s8nq4h"]
 
-[ext_resource type="Script" path="res://scripts/menu_scripts/jogadores_3.gd" id="1_musva"]
+[ext_resource type="Texture2D" uid="uid://ckfl4lacr21d6" path="res://assets/art-packs/gui_blue/mouse64X64.png" id="2_27hog"]
 
 [node name="Jogadores_3" type="CanvasLayer"]
-script = ExtResource("1_musva")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_left = 0.497656
+anchor_top = 0.252
+anchor_right = 0.497656
+anchor_bottom = 0.252
+offset_left = -639.0
+offset_top = -129.44
+offset_right = 642.0
+offset_bottom = 129.56
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.109
+anchor_top = 0.253
+anchor_right = 0.111
+anchor_bottom = 0.253
+offset_left = -137.52
+offset_top = -129.16
+offset_right = 139.92
+offset_bottom = 128.84
+texture = ExtResource("2_27hog")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 2.0
+offset_top = 324.0
+offset_right = 1280.0
+offset_bottom = 720.0
+placeholder_text = "Descreva items ou notas aqui"
+metadata/_edit_use_anchors_ = true

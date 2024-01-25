@@ -15,10 +15,16 @@ run/main_scene="res://game_scenes/main_menus.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MainMenus="*res://scripts/menu_scripts/main_menus.gd"
+
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [rendering]
 

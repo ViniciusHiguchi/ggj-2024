@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://j47o3w1nlrmw"]
+[gd_scene load_steps=7 format=3 uid="uid://j47o3w1nlrmw"]
 
 [ext_resource type="Script" path="res://scripts/menu_scripts/in_game_menu.gd" id="1_6ybow"]
+[ext_resource type="PackedScene" uid="uid://c16vw61wx7c1t" path="res://game_scenes/menu_scenes/jogadores_1.tscn" id="2_6tc7o"]
+[ext_resource type="PackedScene" uid="uid://d3vbk7q32nvd5" path="res://game_scenes/menu_scenes/jogadores_2.tscn" id="3_qrd1k"]
+[ext_resource type="PackedScene" uid="uid://bpmmni4s8nq4h" path="res://game_scenes/menu_scenes/jogadores_3.tscn" id="4_g5yw4"]
+[ext_resource type="PackedScene" uid="uid://b6ae132ty68s0" path="res://game_scenes/menu_scenes/jogadores_4.tscn" id="5_ig4ab"]
+[ext_resource type="PackedScene" uid="uid://c1moftkaso1yw" path="res://game_scenes/menu_scenes/help_page.tscn" id="6_3mvwn"]
 
 [node name="InGameMenu" type="CanvasLayer"]
 script = ExtResource("1_6ybow")
@@ -88,9 +93,32 @@ grow_horizontal = 0
 theme_override_font_sizes/font_size = 20
 text = "Help"
 
+[node name="Jogadores_5" parent="." instance=ExtResource("2_6tc7o")]
+
+[node name="Jogadores_6" parent="." instance=ExtResource("3_qrd1k")]
+
+[node name="Jogadores_7" parent="." instance=ExtResource("4_g5yw4")]
+
+[node name="Jogadores_8" parent="." instance=ExtResource("5_ig4ab")]
+
+[node name="HelpPage" parent="." instance=ExtResource("6_3mvwn")]
+
+[node name="Reset" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.734
+anchor_top = 0.026
+anchor_right = 0.734
+anchor_bottom = 0.026
+offset_left = -94.52
+offset_top = -17.72
+offset_right = 95.48
+offset_bottom = 18.28
+text = "RESTART"
+
 [connection signal="pressed" from="Mapa" to="." method="_on_mapa_pressed"]
-[connection signal="pressed" from="Jogadores_1" to="." method="_on_jogadores_pressed"]
-[connection signal="pressed" from="Jogadores_2" to="." method="_on_jogadores_pressed"]
-[connection signal="pressed" from="Jogadores_3" to="." method="_on_jogadores_pressed"]
-[connection signal="pressed" from="Jogadores_4" to="." method="_on_jogadores_pressed"]
+[connection signal="pressed" from="Jogadores_1" to="." method="_on_jogadores_1_pressed"]
+[connection signal="pressed" from="Jogadores_2" to="." method="_on_jogadores_2_pressed"]
+[connection signal="pressed" from="Jogadores_3" to="." method="_on_jogadores_3_pressed"]
+[connection signal="pressed" from="Jogadores_4" to="." method="_on_jogadores_4_pressed"]
 [connection signal="pressed" from="Help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
