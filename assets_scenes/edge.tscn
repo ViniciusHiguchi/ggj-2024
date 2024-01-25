@@ -4,8 +4,9 @@
 [ext_resource type="Script" path="res://scripts/map/arrow.gd" id="2_gn202"]
 
 [node name="TextureRect" type="TextureRect"]
-texture_filter = 1
+texture_filter = 5
 offset_right = 282.0
 offset_bottom = 14.0
 texture = ExtResource("1_jubtf")
+expand_mode = 3
 script = ExtResource("2_gn202")
