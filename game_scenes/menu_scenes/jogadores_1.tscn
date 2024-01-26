@@ -28,8 +28,13 @@ offset_bottom = 128.84
 texture = ExtResource("1_c5ydy")
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 2.0
-offset_top = 324.0
-offset_right = 1280.0
-offset_bottom = 720.0
-placeholder_text = "Descreva items ou notas aqui"
+anchors_preset = -1
+anchor_left = 0.501
+anchor_top = 0.725
+anchor_right = 0.501
+anchor_bottom = 0.725
+offset_left = -639.28
+offset_top = -198.0
+offset_right = 638.72
+offset_bottom = 198.0
+placeholder_text = "Descreva itens ou notas aqui"

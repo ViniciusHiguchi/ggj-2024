@@ -19,4 +19,4 @@ func _on_aumenta_pressed():
 func _on_confirmar_pressed():
 	#Scena Temporaria, correta é a do main mapa (essa fica dentro dele)
 	MainMenus.help = false
-	get_tree().change_scene_to_file("res://game_scenes/menu_scenes/in_game_menu.tscn")
+	get_tree().change_scene_to_file("res://game_scenes/map.tscn")

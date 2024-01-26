@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d35po2xhywgq5"]
+
+[ext_resource type="Script" path="res://scripts/map/map_control.gd" id="1_5jdrm"]
+[ext_resource type="PackedScene" uid="uid://j47o3w1nlrmw" path="res://game_scenes/menu_scenes/in_game_menu.tscn" id="2_ao7l5"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = 71.0
+offset_right = -45.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5jdrm")
+
+[node name="InGameMenu" parent="." instance=ExtResource("2_ao7l5")]

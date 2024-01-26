@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://css6c85r7o1mw"]
+
+[ext_resource type="Texture2D" uid="uid://bwk543owi5qeu" path="res://assets/blocks/room_tiles/tile001.png" id="1_priix"]
+[ext_resource type="Script" path="res://scripts/map/node.gd" id="2_ecn5m"]
+
+[node name="Button" type="Button"]
+texture_filter = 1
+offset_right = 82.0
+offset_bottom = 83.0
+action_mode = 0
+button_mask = 0
+icon = ExtResource("1_priix")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("2_ecn5m")

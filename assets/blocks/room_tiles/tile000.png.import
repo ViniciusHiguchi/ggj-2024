@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6ods8pvbc531"
-path="res://.godot/imported/pxfuel.jpg-d33774bb9d37a90906025b97d475aadb.ctex"
+uid="uid://bat41h6agu2sb"
+path="res://.godot/imported/tile000.png-a9fb08a279da6288627c9a4c4acf467f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game_scenes/menu_scenes/pxfuel.jpg"
-dest_files=["res://.godot/imported/pxfuel.jpg-d33774bb9d37a90906025b97d475aadb.ctex"]
+source_file="res://assets/blocks/room_tiles/tile000.png"
+dest_files=["res://.godot/imported/tile000.png-a9fb08a279da6288627c9a4c4acf467f.ctex"]
 
 [params]
 
