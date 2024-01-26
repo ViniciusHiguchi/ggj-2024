@@ -1,4 +1,5 @@
 extends CanvasLayer
+var is_help = false
 
 func _ready():
 	
@@ -21,11 +22,19 @@ func _on_mapa_pressed():
 	$HelpPage.hide()
 
 func _on_help_pressed():
-	$Jogadores_5.hide()
-	$Jogadores_6.hide()
-	$Jogadores_7.hide()
-	$Jogadores_8.hide()
-	$HelpPage.show()
+	if is_help:
+		
+		$HelpPage.hide()
+		is_help = false
+		
+	else:
+		$Jogadores_5.hide()
+		$Jogadores_6.hide()
+		$Jogadores_7.hide()
+		$Jogadores_8.hide()
+		$HelpPage.show()
+		is_help = true
+		
 
 func _on_jogadores_1_pressed():
 	$Jogadores_5.show()

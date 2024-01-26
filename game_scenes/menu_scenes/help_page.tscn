@@ -1,23 +1,215 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1moftkaso1yw"]
+[gd_scene load_steps=11 format=3 uid="uid://c1moftkaso1yw"]
 
 [ext_resource type="Script" path="res://scripts/menu_scripts/help_page.gd" id="1_bvi7j"]
+[ext_resource type="Texture2D" uid="uid://bvxjm4qe6orl8" path="res://assets/art-packs/gui_blue/buttonSquare64X64.png" id="2_24vml"]
+[ext_resource type="Texture2D" uid="uid://dlefyfkr65qjs" path="res://assets/room_tiles/tile004.png" id="2_dxejr"]
+[ext_resource type="Texture2D" uid="uid://ci4078dhpl3tv" path="res://assets/room_tiles/tile000.png" id="2_tfic7"]
+[ext_resource type="Texture2D" uid="uid://dif87iduiu05g" path="res://assets/room_tiles/tile002.png" id="3_484jf"]
+[ext_resource type="Texture2D" uid="uid://c7ya8fob813jn" path="res://assets/room_tiles/tile001.png" id="5_5cf57"]
+[ext_resource type="Texture2D" uid="uid://dn4rk4u88fcm6" path="res://assets/room_tiles/tile005.png" id="6_gv1gl"]
+[ext_resource type="Texture2D" uid="uid://c0uscnmpmjf3e" path="res://assets/room_tiles/tile006.png" id="7_ahxr7"]
+[ext_resource type="Texture2D" uid="uid://bentcre4n1h35" path="res://assets/room_tiles/tile007.png" id="8_lig06"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ye70a"]
+diffuse_texture = ExtResource("2_24vml")
 
 [node name="HelpPage" type="CanvasLayer"]
 script = ExtResource("1_bvi7j")
 
-[node name="Voltar" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -174.0
-offset_top = -83.0
-offset_right = 173.0
-offset_bottom = 83.0
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.0509804, 0.0509804, 0.0509804, 1)
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -103.0
+offset_top = 38.0
+offset_right = 102.0
+offset_bottom = 53.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "Voltar"
+texture = SubResource("CanvasTexture_ye70a")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 116.0
+offset_top = 77.0
+offset_right = -63.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 52
+text = "BLIND FOLK
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_vertical = 2
+text = "Perdidos em uma masmorra sem conseguirem ver para onde estão indo, os jogadores devem sobreviver aos perigos que encontram pela frente para fugir da masmorra com o grande tesouro. Porém observando a todos, o temido Mestre da Masmorra deve fazer de tudo para dificultar a saída dos jogadores e garantir que todos dêem muitas risadas!
+"
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "SALAS"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Inicio" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="Tile000" type="TextureRect" parent="ScrollContainer/VBoxContainer/Inicio"]
+layout_mode = 2
+texture = ExtResource("2_dxejr")
+stretch_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Inicio"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Início: É aqui onde começa a jornada! Todos os jogadores começam nesta sala e têm como objetivo cruzar à masmorra para chegar ao tesouro. "
+autowrap_mode = 3
+
+[node name="Batalha" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="Tile000" type="TextureRect" parent="ScrollContainer/VBoxContainer/Batalha"]
+layout_mode = 2
+texture = ExtResource("3_484jf")
+stretch_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Batalha"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Batalha: Na sala de batalha, dois jogadores devem participar de um duelo, onde apenas o jogador vitorioso ganhará uma recompensa.
+Sugestões: Jokenpô; Competição de quem pisca primeiro; Sorte grande no dado; Par ou ímpar;
+"
+autowrap_mode = 3
+
+[node name="Neutras" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="Tile000" type="TextureRect" parent="ScrollContainer/VBoxContainer/Neutras"]
+layout_mode = 2
+texture = ExtResource("5_5cf57")
+stretch_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Neutras"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Sala Neutra: A Sala neutra não possui nenhuma ação especial, o jogador apenas deve descansar e se preparar para os perigos que se encontram mais à frente!"
+autowrap_mode = 3
+
+[node name="VBoxContainer8" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="Desafio" type="TextureRect" parent="ScrollContainer/VBoxContainer/VBoxContainer8"]
+layout_mode = 2
+texture = ExtResource("2_tfic7")
+stretch_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/VBoxContainer8"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Sala do Desafio: Todos os jogadores devem participar de um desafio escolhido pelo Mestre com o intuito de dar muitas risadas. 
+Sugestões: Competição de história mais engraçada; Competição de melhor careta; Eu nunca;Duas verdades e uma mentira;
+"
+autowrap_mode = 3
+
+[node name="Teleporte" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="Tile000" type="TextureRect" parent="ScrollContainer/VBoxContainer/Teleporte"]
+layout_mode = 2
+texture = ExtResource("6_gv1gl")
+stretch_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Teleporte"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Teleporte: A Sala de teleporte manda o jogador para algum outro lugar no mapa, tome cuidado para não acabar perdido!"
+autowrap_mode = 3
+
+[node name="Bau" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="Tile000" type="TextureRect" parent="ScrollContainer/VBoxContainer/Bau"]
+layout_mode = 2
+texture = ExtResource("7_ahxr7")
+stretch_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Bau"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Sala do Baú: A Sala de baú possui um item especial aleatório para recompensar o jogador que passar por ela.
+"
+autowrap_mode = 3
+
+[node name="Tesouro" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="Tile000" type="TextureRect" parent="ScrollContainer/VBoxContainer/Tesouro"]
+layout_mode = 2
+texture = ExtResource("8_lig06")
+stretch_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/Tesouro"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Tesouro: A Sala de tesouro é o fim da jornada! Escondida em algum lugar da masmorra, o primeiro jogador a alcançá-la é o vencedor."
+autowrap_mode = 3
+
+[node name="Voltar" type="Button" parent="."]
+offset_left = 1080.0
+offset_top = 30.0
+offset_right = 1164.0
+offset_bottom = 79.0
+text = "Voltar
+"
 
 [connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]
