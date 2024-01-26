@@ -94,14 +94,19 @@ theme_override_font_sizes/font_size = 20
 text = "Help"
 
 [node name="Jogadores_5" parent="." instance=ExtResource("2_6tc7o")]
+visible = false
 
 [node name="Jogadores_6" parent="." instance=ExtResource("3_qrd1k")]
+visible = false
 
 [node name="Jogadores_7" parent="." instance=ExtResource("4_g5yw4")]
+visible = false
 
 [node name="Jogadores_8" parent="." instance=ExtResource("5_ig4ab")]
+visible = false
 
 [node name="HelpPage" parent="." instance=ExtResource("6_3mvwn")]
+visible = false
 
 [node name="Reset" type="Button" parent="."]
 anchors_preset = -1

@@ -185,3 +185,13 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Tesouro: A Sala de tesouro é o fim da jornada! Escondida em algum lugar da masmorra, o primeiro jogador a alcançá-la é o vencedor."
 autowrap_mode = 3
+
+[node name="Voltar" type="Button" parent="."]
+offset_left = 911.0
+offset_top = 25.0
+offset_right = 1170.0
+offset_bottom = 56.0
+text = "Voltar
+"
+
+[connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]
