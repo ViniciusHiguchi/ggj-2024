@@ -205,10 +205,10 @@ text = "Tesouro: A Sala de tesouro é o fim da jornada! Escondida em algum lugar
 autowrap_mode = 3
 
 [node name="Voltar" type="Button" parent="."]
-offset_left = 1080.0
-offset_top = 30.0
-offset_right = 1164.0
-offset_bottom = 79.0
+offset_left = 1074.0
+offset_top = 74.0
+offset_right = 1158.0
+offset_bottom = 123.0
 text = "Voltar
 "
 

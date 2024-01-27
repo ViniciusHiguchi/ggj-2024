@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b6ae132ty68s0"]
 
-[ext_resource type="Texture2D" uid="uid://c5bpju7i5ce7c" path="res://assets/art-packs/gui_blue/lockRed64X64.png" id="2_tkog0"]
+[ext_resource type="Texture2D" uid="uid://brxq52vk2l2nx" path="res://assets/characters/tile000_s.png" id="1_gk732"]
 
 [node name="Jogadores_4" type="CanvasLayer"]
 
@@ -16,16 +16,17 @@ offset_right = 639.0
 offset_bottom = 129.56
 
 [node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.109
 anchor_top = 0.253
 anchor_right = 0.111
 anchor_bottom = 0.253
 offset_left = -137.52
-offset_top = -129.16
+offset_top = -130.16
 offset_right = 139.92
-offset_bottom = 128.84
-texture = ExtResource("2_tkog0")
+offset_bottom = 149.84
+texture = ExtResource("1_gk732")
 
 [node name="TextEdit" type="TextEdit" parent="."]
 anchors_preset = -1

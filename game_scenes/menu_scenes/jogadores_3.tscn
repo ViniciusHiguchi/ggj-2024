@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bpmmni4s8nq4h"]
 
-[ext_resource type="Texture2D" uid="uid://ckfl4lacr21d6" path="res://assets/art-packs/gui_blue/mouse64X64.png" id="2_27hog"]
+[ext_resource type="Texture2D" uid="uid://gd5xp8pbkcsu" path="res://assets/characters/tile000 _m.png" id="1_t4hjo"]
 
 [node name="Jogadores_3" type="CanvasLayer"]
 
@@ -17,16 +17,17 @@ offset_bottom = 129.56
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.109
 anchor_top = 0.253
 anchor_right = 0.111
 anchor_bottom = 0.253
 offset_left = -137.52
-offset_top = -129.16
+offset_top = -130.16
 offset_right = 139.92
-offset_bottom = 128.84
-texture = ExtResource("2_27hog")
+offset_bottom = 149.84
+texture = ExtResource("1_t4hjo")
 metadata/_edit_use_anchors_ = true
 
 [node name="TextEdit" type="TextEdit" parent="."]

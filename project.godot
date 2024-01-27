@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 MainMenus="*res://scripts/menu_scripts/main_menus.gd"
+CharacterControl="*res://scripts/character_control.gd"
 
 [display]
 
@@ -25,6 +26,10 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 

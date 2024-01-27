@@ -7,7 +7,6 @@ var edge = preload("res://assets_scenes/edge.tscn")
 var nodes = []
 var edges = {} # k : [node, node2, ...]
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	seed(hash("wow such game"))
@@ -79,3 +78,4 @@ func _generate_nodes():
 				var size_y = randf_range( (float(size.y)*(float(j)/y))*(1+0.2), float(size.y*0.8)*((j+1.0)/y)*(1-0.2) )
 				var vector = Vector2(size_x, size_y)
 				nodes[-1].set_pos(vector)
+	

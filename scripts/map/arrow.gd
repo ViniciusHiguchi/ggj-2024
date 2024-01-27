@@ -1,8 +1,5 @@
 extends TextureRect
 
-@onready var button_2 = $"../Button2"
-@onready var button = $"../Button"
-
 func _ready():
 	pass
 

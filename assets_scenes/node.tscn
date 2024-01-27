@@ -1,16 +1,136 @@
-[gd_scene load_steps=3 format=3 uid="uid://css6c85r7o1mw"]
+[gd_scene load_steps=8 format=3 uid="uid://css6c85r7o1mw"]
 
 [ext_resource type="Texture2D" uid="uid://bwk543owi5qeu" path="res://assets/blocks/room_tiles/tile001.png" id="1_priix"]
 [ext_resource type="Script" path="res://scripts/map/node.gd" id="2_ecn5m"]
+[ext_resource type="Texture2D" uid="uid://c50mvwdnt48ue" path="res://assets/characters/tile000 _w.png" id="3_b342y"]
+[ext_resource type="Texture2D" uid="uid://bnf8pdyd4u5an" path="res://assets/characters/tile000_a.png" id="4_u8f45"]
+[ext_resource type="Texture2D" uid="uid://gd5xp8pbkcsu" path="res://assets/characters/tile000 _m.png" id="5_er3tp"]
+[ext_resource type="Texture2D" uid="uid://brxq52vk2l2nx" path="res://assets/characters/tile000_s.png" id="6_rrwid"]
+[ext_resource type="Script" path="res://scripts/map/char_select_canvas.gd" id="7_rp77r"]
 
 [node name="Button" type="Button"]
 texture_filter = 1
 offset_right = 82.0
 offset_bottom = 83.0
 action_mode = 0
-button_mask = 0
 icon = ExtResource("1_priix")
 flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("2_ecn5m")
+
+[node name="player1" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 1
+offset_left = -23.0
+offset_top = -23.0
+offset_right = 41.0
+offset_bottom = 41.0
+texture = ExtResource("3_b342y")
+
+[node name="player2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -42.0
+offset_top = -21.0
+offset_right = 22.0
+offset_bottom = 43.0
+grow_horizontal = 0
+texture = ExtResource("4_u8f45")
+
+[node name="player3" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -23.0
+offset_top = -45.0
+offset_right = 41.0
+offset_bottom = 19.0
+grow_vertical = 0
+texture = ExtResource("5_er3tp")
+
+[node name="player4" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -42.0
+offset_top = -44.0
+offset_right = 22.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("6_rrwid")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 3
+visible = false
+script = ExtResource("7_rp77r")
+
+[node name="Button5" type="Button" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 157.0
+offset_top = 429.0
+offset_right = 1152.0
+offset_bottom = 629.0
+theme_override_constants/separation = 40
+
+[node name="Button" type="Button" parent="CanvasLayer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0
+"
+icon = ExtResource("3_b342y")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="CanvasLayer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+icon = ExtResource("4_u8f45")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button3" type="Button" parent="CanvasLayer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "2"
+icon = ExtResource("5_er3tp")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button4" type="Button" parent="CanvasLayer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+text = "3"
+icon = ExtResource("6_rrwid")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="." to="CanvasLayer" method="_on_room_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button5" to="CanvasLayer" method="_on_out_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button" to="." method="_call_char_control" binds= [0]]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button2" to="." method="_call_char_control" binds= [1]]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button3" to="." method="_call_char_control" binds= [2]]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button4" to="." method="_call_char_control" binds= [3]]
