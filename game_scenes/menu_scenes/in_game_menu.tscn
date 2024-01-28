@@ -1,96 +1,239 @@
-[gd_scene load_steps=7 format=3 uid="uid://j47o3w1nlrmw"]
+[gd_scene load_steps=48 format=3 uid="uid://j47o3w1nlrmw"]
 
 [ext_resource type="Script" path="res://scripts/menu_scripts/in_game_menu.gd" id="1_6ybow"]
 [ext_resource type="PackedScene" uid="uid://c16vw61wx7c1t" path="res://game_scenes/menu_scenes/jogadores_1.tscn" id="2_6tc7o"]
+[ext_resource type="Texture2D" uid="uid://c88ppr1omckl8" path="res://assets/buttons/[7] Gold/[1] Normal.png" id="2_xx4ft"]
+[ext_resource type="Texture2D" uid="uid://bvn121n0flcwa" path="res://assets/books/Content/10 Banners & Headers/Cutout/7.png" id="3_6mmwg"]
+[ext_resource type="Texture2D" uid="uid://bnmesa4k6nmqe" path="res://assets/buttons/[7] Gold/[3] Hover.png" id="3_cwe0i"]
 [ext_resource type="PackedScene" uid="uid://d3vbk7q32nvd5" path="res://game_scenes/menu_scenes/jogadores_2.tscn" id="3_qrd1k"]
+[ext_resource type="Texture2D" uid="uid://jb0rysgd2e2s" path="res://assets/buttons/[7] Gold/[2] Clicked.png" id="4_3rjpl"]
 [ext_resource type="PackedScene" uid="uid://bpmmni4s8nq4h" path="res://game_scenes/menu_scenes/jogadores_3.tscn" id="4_g5yw4"]
 [ext_resource type="PackedScene" uid="uid://b6ae132ty68s0" path="res://game_scenes/menu_scenes/jogadores_4.tscn" id="5_ig4ab"]
+[ext_resource type="Texture2D" uid="uid://db2ien7hbq82d" path="res://assets/buttons/[2] Red/[1] Normal.png" id="5_om7tk"]
 [ext_resource type="PackedScene" uid="uid://c1moftkaso1yw" path="res://game_scenes/menu_scenes/help_page.tscn" id="6_3mvwn"]
+[ext_resource type="Texture2D" uid="uid://7jrdn1a8vt5m" path="res://assets/buttons/[2] Red/[3] Hover.png" id="6_qlv4v"]
+[ext_resource type="Texture2D" uid="uid://xqrsq0ytietj" path="res://assets/buttons/[2] Red/[2] Clicked.png" id="7_tyxcn"]
+[ext_resource type="Texture2D" uid="uid://buo2g4dihv0mq" path="res://assets/buttons/[4] Green/[1] Normal.png" id="8_srfdu"]
+[ext_resource type="Texture2D" uid="uid://j1o0ktqsmum7" path="res://assets/buttons/[4] Green/[3] Hover.png" id="9_wxgvi"]
+[ext_resource type="Texture2D" uid="uid://c3f61y2cl7k73" path="res://assets/buttons/[4] Green/[2] Clicked.png" id="10_sjh4w"]
+[ext_resource type="Texture2D" uid="uid://c5pcjrlrt5d8l" path="res://assets/buttons/[5] Blue/[1] Normal.png" id="11_mfoip"]
+[ext_resource type="Texture2D" uid="uid://cafnejdytys6h" path="res://assets/buttons/[5] Blue/[3] Hover.png" id="12_x2dim"]
+[ext_resource type="Texture2D" uid="uid://rfrwljxd5ud" path="res://assets/buttons/[5] Blue/[2] Clicked.png" id="13_1v75q"]
+[ext_resource type="Texture2D" uid="uid://xqvhyb84yjpp" path="res://assets/buttons/[3]Yellow/[1] Normal.png" id="14_pxu0m"]
+[ext_resource type="Texture2D" uid="uid://c4ut5fb8f4oly" path="res://assets/buttons/[3]Yellow/[3] Hover.png" id="15_4vsed"]
+[ext_resource type="Texture2D" uid="uid://cbnv4uj66ok52" path="res://assets/buttons/[3]Yellow/[2] Clicked.png" id="16_3qqgi"]
+[ext_resource type="Texture2D" uid="uid://5lql4qsuc1tf" path="res://assets/buttons/[6] Silver/[1] Normal.png" id="17_b71ts"]
+[ext_resource type="Texture2D" uid="uid://pjenyrs8bnpq" path="res://assets/buttons/[6] Silver/[3] Hover.png" id="18_lewnq"]
+[ext_resource type="Texture2D" uid="uid://bwocsmiilax1e" path="res://assets/buttons/[6] Silver/[2] Clicked.png" id="19_cimrp"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_kv37b"]
+diffuse_texture = ExtResource("3_6mmwg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ncqtw"]
+content_margin_bottom = 10.0
+texture = ExtResource("2_xx4ft")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8lmtl"]
+content_margin_bottom = 10.0
+texture = ExtResource("3_cwe0i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4dfsv"]
+texture = ExtResource("4_3rjpl")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q41oe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ussix"]
+content_margin_bottom = 10.0
+texture = ExtResource("5_om7tk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_067rn"]
+content_margin_bottom = 10.0
+texture = ExtResource("6_qlv4v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lfrfu"]
+texture = ExtResource("7_tyxcn")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vf1vd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_potst"]
+content_margin_bottom = 10.0
+texture = ExtResource("8_srfdu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bq836"]
+content_margin_bottom = 10.0
+texture = ExtResource("9_wxgvi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mpfyq"]
+texture = ExtResource("10_sjh4w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_43um4"]
+content_margin_bottom = 10.0
+texture = ExtResource("11_mfoip")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5lw7e"]
+content_margin_bottom = 10.0
+texture = ExtResource("12_x2dim")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4emx"]
+texture = ExtResource("13_1v75q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3nnnm"]
+content_margin_bottom = 10.0
+texture = ExtResource("14_pxu0m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dsolo"]
+content_margin_bottom = 10.0
+texture = ExtResource("15_4vsed")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2i64f"]
+texture = ExtResource("16_3qqgi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxlmh"]
+content_margin_bottom = 10.0
+texture = ExtResource("17_b71ts")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pf6wm"]
+content_margin_bottom = 10.0
+texture = ExtResource("18_lewnq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wenw7"]
+texture = ExtResource("19_cimrp")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ppxr6"]
 
 [node name="InGameMenu" type="CanvasLayer"]
 script = ExtResource("1_6ybow")
 
+[node name="TextureRect2" type="TextureRect" parent="."]
+z_index = -2
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_bottom = -663.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_kv37b")
+expand_mode = 1
+
 [node name="Mapa" type="Button" parent="."]
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.048
 anchor_top = 0.015
 anchor_right = 0.048
 anchor_bottom = 0.015
 offset_left = -61.44
-offset_top = -10.8
+offset_top = -5.8
 offset_right = 60.56
-offset_bottom = 10.2
+offset_bottom = 23.2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_ncqtw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8lmtl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4dfsv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q41oe")
 text = "Mapa"
 
 [node name="Jogadores_1" type="Button" parent="."]
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.156
 anchor_top = 0.015
 anchor_right = 0.156
 anchor_bottom = 0.015
 offset_left = -75.68
-offset_top = -9.8
+offset_top = -5.8
 offset_right = 76.32
-offset_bottom = 10.2
+offset_bottom = 23.2
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_ussix")
+theme_override_styles/hover = SubResource("StyleBoxTexture_067rn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lfrfu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vf1vd")
 text = "Jogador 1"
 
 [node name="Jogadores_2" type="Button" parent="."]
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.277
 anchor_top = 0.015
 anchor_right = 0.277
 anchor_bottom = 0.015
 offset_left = -76.56
-offset_top = -9.8
+offset_top = -5.8
 offset_right = 75.44
-offset_bottom = 10.2
+offset_bottom = 23.2
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_potst")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bq836")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mpfyq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vf1vd")
 text = "Jogador 2"
 
 [node name="Jogadores_3" type="Button" parent="."]
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.397
 anchor_top = 0.015
 anchor_right = 0.397
 anchor_bottom = 0.015
 offset_left = -76.16
-offset_top = -9.8
+offset_top = -5.8
 offset_right = 75.84
-offset_bottom = 10.2
+offset_bottom = 23.2
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_43um4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5lw7e")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_g4emx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vf1vd")
 text = "Jogador 3"
 
 [node name="Jogadores_4" type="Button" parent="."]
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.518
 anchor_top = 0.015
 anchor_right = 0.518
 anchor_bottom = 0.015
 offset_left = -76.04
-offset_top = -9.8
+offset_top = -5.8
 offset_right = 75.96
-offset_bottom = 10.2
+offset_bottom = 23.2
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_3nnnm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dsolo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2i64f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vf1vd")
 text = "Jogador 4"
 
 [node name="Help" type="Button" parent="."]
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.983
 anchor_top = 0.022
 anchor_right = 0.983
 anchor_bottom = 0.022
-offset_left = 13.76
-offset_top = -15.84
-offset_right = 21.76
-offset_bottom = -7.84
+offset_left = -94.24
+offset_top = -10.84
+offset_right = 13.76
+offset_bottom = 20.16
 grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_uxlmh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pf6wm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wenw7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ppxr6")
 text = "Help"
 
 [node name="Jogadores_5" parent="." instance=ExtResource("2_6tc7o")]
@@ -109,16 +252,23 @@ visible = false
 visible = false
 
 [node name="Reset" type="Button" parent="."]
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.734
 anchor_top = 0.026
 anchor_right = 0.734
 anchor_bottom = 0.026
 offset_left = -94.52
-offset_top = -17.72
+offset_top = -13.72
 offset_right = 95.48
-offset_bottom = 18.28
-text = "RESTART"
+offset_bottom = 16.28
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_uxlmh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pf6wm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wenw7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ppxr6")
+text = "Restart"
 
 [connection signal="pressed" from="Mapa" to="." method="_on_mapa_pressed"]
 [connection signal="pressed" from="Jogadores_1" to="." method="_on_jogadores_1_pressed"]

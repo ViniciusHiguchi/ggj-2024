@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1moftkaso1yw"]
+[gd_scene load_steps=12 format=3 uid="uid://c1moftkaso1yw"]
 
 [ext_resource type="Script" path="res://scripts/menu_scripts/help_page.gd" id="1_bvi7j"]
 [ext_resource type="Texture2D" uid="uid://bvxjm4qe6orl8" path="res://assets/art-packs/gui_blue/buttonSquare64X64.png" id="2_24vml"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dn4rk4u88fcm6" path="res://assets/room_tiles/tile005.png" id="6_gv1gl"]
 [ext_resource type="Texture2D" uid="uid://c0uscnmpmjf3e" path="res://assets/room_tiles/tile006.png" id="7_ahxr7"]
 [ext_resource type="Texture2D" uid="uid://bentcre4n1h35" path="res://assets/room_tiles/tile007.png" id="8_lig06"]
+[ext_resource type="Texture2D" uid="uid://b0xpaoodjsibn" path="res://assets/room_tiles/tile003.png" id="10_22jjg"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ye70a"]
 diffuse_texture = ExtResource("2_24vml")
@@ -17,7 +18,7 @@ diffuse_texture = ExtResource("2_24vml")
 script = ExtResource("1_bvi7j")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-self_modulate = Color(0.0509804, 0.0509804, 0.0509804, 1)
+self_modulate = Color(0.0509804, 0.0509804, 0.0509804, 0.780392)
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -184,6 +185,24 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Sala do Baú: A Sala de baú possui um item especial aleatório para recompensar o jogador que passar por ela.
 "
+autowrap_mode = 3
+
+[node name="loja" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="Tile000" type="TextureRect" parent="ScrollContainer/VBoxContainer/loja"]
+layout_mode = 2
+texture = ExtResource("10_22jjg")
+stretch_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/loja"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Loja: Troque seus espólios por itens únicos, vindos direto da imaginação malévola e inescrupulosa do meste."
 autowrap_mode = 3
 
 [node name="Tesouro" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]

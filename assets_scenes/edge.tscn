@@ -5,7 +5,7 @@
 [sub_resource type="CanvasTexture" id="CanvasTexture_wr325"]
 
 [node name="TextureRect" type="TextureRect"]
-self_modulate = Color(0.502719, 0.502719, 0.502719, 1)
+self_modulate = Color(0.92549, 0.866667, 0.752941, 1)
 texture_filter = 2
 offset_right = 282.0
 offset_bottom = 14.0

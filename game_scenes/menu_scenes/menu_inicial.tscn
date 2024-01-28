@@ -1,11 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqpnd61sxqagc"]
+[gd_scene load_steps=9 format=3 uid="uid://cqpnd61sxqagc"]
 
 [ext_resource type="Script" path="res://scripts/menu_scripts/menu_inicial.gd" id="1_sjubf"]
+[ext_resource type="Texture2D" uid="uid://ptx0xqwm458c" path="res://assets/buttons/[8] Wood/[1] Normal.png" id="2_ennot"]
+[ext_resource type="Texture2D" uid="uid://dg2ro4gyeuj62" path="res://assets/books/Book Desk/5.png" id="2_r7fbx"]
+[ext_resource type="Texture2D" uid="uid://c253wvy1mhifq" path="res://assets/buttons/[8] Wood/[3] Hover.png" id="3_k8vc2"]
+[ext_resource type="Texture2D" uid="uid://c4kpm2edu2w42" path="res://assets/buttons/[8] Wood/[2] Clicked.png" id="4_7pjd4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gvo7v"]
+content_margin_bottom = 40.0
+texture = ExtResource("2_ennot")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0mgol"]
+content_margin_bottom = 40.0
+texture = ExtResource("3_k8vc2")
+modulate_color = Color(0.647059, 0.596078, 0.533333, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_205qa"]
+texture = ExtResource("4_7pjd4")
 
 [node name="MenuInicial" type="CanvasLayer"]
 script = ExtResource("1_sjubf")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_r7fbx")
+
 [node name="Play" type="Button" parent="."]
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.507
 anchor_top = 0.488
@@ -19,9 +45,13 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxTexture_gvo7v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0mgol")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_205qa")
 text = "Play"
 
 [node name="Help" type="Button" parent="."]
+texture_filter = 1
 anchors_preset = -1
 anchor_left = 0.507
 anchor_top = 0.776
@@ -33,6 +63,9 @@ offset_right = 259.04
 offset_bottom = 65.28
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxTexture_gvo7v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0mgol")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_205qa")
 text = "Help"
 
 [node name="Titulo" type="Label" parent="."]
