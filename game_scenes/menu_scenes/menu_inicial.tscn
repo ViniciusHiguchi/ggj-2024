@@ -1,10 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqpnd61sxqagc"]
+[gd_scene load_steps=14 format=3 uid="uid://cqpnd61sxqagc"]
 
 [ext_resource type="Script" path="res://scripts/menu_scripts/menu_inicial.gd" id="1_sjubf"]
 [ext_resource type="Texture2D" uid="uid://ptx0xqwm458c" path="res://assets/buttons/[8] Wood/[1] Normal.png" id="2_ennot"]
 [ext_resource type="Texture2D" uid="uid://dg2ro4gyeuj62" path="res://assets/books/Book Desk/5.png" id="2_r7fbx"]
+[ext_resource type="Texture2D" uid="uid://dmqtp5pxsk4s5" path="res://assets/pxArt.png" id="3_bd0ar"]
 [ext_resource type="Texture2D" uid="uid://c253wvy1mhifq" path="res://assets/buttons/[8] Wood/[3] Hover.png" id="3_k8vc2"]
 [ext_resource type="Texture2D" uid="uid://c4kpm2edu2w42" path="res://assets/buttons/[8] Wood/[2] Clicked.png" id="4_7pjd4"]
+[ext_resource type="Texture2D" uid="uid://clwog1wolwpap" path="res://assets/books/Content/10 Banners & Headers/Cutout/8.png" id="6_dt2fe"]
+[ext_resource type="Texture2D" uid="uid://hddsx40xjvxa" path="res://assets/books/Content/10 Banners & Headers/Cutout/6.png" id="7_oqtfv"]
+[ext_resource type="Texture2D" uid="uid://bvn121n0flcwa" path="res://assets/books/Content/10 Banners & Headers/Cutout/7.png" id="8_r3qys"]
+[ext_resource type="Texture2D" uid="uid://cfqwb4j1d8e85" path="res://assets/logo.png" id="9_chkab"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gvo7v"]
 content_margin_bottom = 40.0
@@ -68,20 +73,84 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_0mgol")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_205qa")
 text = "Help"
 
-[node name="Titulo" type="Label" parent="."]
+[node name="Node2D2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -726.0
+offset_top = -453.0
+offset_right = -726.0
+offset_bottom = -453.0
+scale = Vector2(3, 3)
+
+[node name="8" type="Sprite2D" parent="Node2D2"]
+position = Vector2(574, 197.667)
+texture = ExtResource("6_dt2fe")
+
+[node name="6" type="Sprite2D" parent="Node2D2"]
+position = Vector2(350, 197.667)
+texture = ExtResource("7_oqtfv")
+
+[node name="7" type="Sprite2D" parent="Node2D2"]
+position = Vector2(462, 197.667)
+texture = ExtResource("8_r3qys")
+
+[node name="Logo" type="Sprite2D" parent="Node2D2"]
+position = Vector2(392.333, 191)
+scale = Vector2(1.04948, 1.04948)
+texture = ExtResource("9_chkab")
+
+[node name="Titulo" type="Label" parent="Node2D2"]
+layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.165
 anchor_right = 0.5
 anchor_bottom = 0.165
-offset_left = -640.0
-offset_top = -118.8
-offset_right = 640.0
-offset_bottom = 119.2
+offset_left = 252.0
+offset_top = 152.667
+offset_right = 1532.0
+offset_bottom = 390.667
+scale = Vector2(0.33, 0.33)
+theme_override_colors/font_color = Color(0.831373, 0.635294, 0, 1)
 theme_override_font_sizes/font_size = 100
 text = "Blind Folk"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(8, 18)
+
+[node name="TextureRect3" type="TextureRect" parent="Node2D"]
+self_modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+offset_left = 5.0
+offset_top = 404.0
+offset_right = 260.0
+offset_bottom = 659.0
+texture = ExtResource("3_bd0ar")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Node2D"]
+texture_filter = 1
+offset_left = 12.0
+offset_top = 407.0
+offset_right = 257.0
+offset_bottom = 652.0
+texture = ExtResource("3_bd0ar")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Node2D"]
+offset_left = 5.0
+offset_top = 641.0
+offset_right = 279.0
+offset_bottom = 679.0
+theme_override_colors/font_color = Color(0.0509804, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 40
+text = "@greenteamhc"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Help" to="." method="_on_help_pressed"]

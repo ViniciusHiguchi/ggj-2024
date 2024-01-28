@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://hg361m4bqgdd"]
+[gd_scene load_steps=19 format=3 uid="uid://hg361m4bqgdd"]
 
 [ext_resource type="Script" path="res://scripts/menu_scripts/selecao_jogadores.gd" id="1_5g85c"]
 [ext_resource type="Texture2D" uid="uid://dg2ro4gyeuj62" path="res://assets/books/Book Desk/5.png" id="2_hsqnt"]
 [ext_resource type="Texture2D" uid="uid://c88ppr1omckl8" path="res://assets/buttons/[7] Gold/[1] Normal.png" id="2_vq7wr"]
 [ext_resource type="Texture2D" uid="uid://bnmesa4k6nmqe" path="res://assets/buttons/[7] Gold/[3] Hover.png" id="3_fcm8v"]
 [ext_resource type="Texture2D" uid="uid://dhg1j3tgi1klf" path="res://assets/art-packs/gui_paper/amber_clean (copy).png" id="3_x3q6p"]
+[ext_resource type="Texture2D" uid="uid://chblsumtd7kny" path="res://assets/books/Content/5 Holders/3.png" id="4_lk4st"]
 [ext_resource type="Texture2D" uid="uid://jb0rysgd2e2s" path="res://assets/buttons/[7] Gold/[2] Clicked.png" id="4_nmsjk"]
 [ext_resource type="Texture2D" uid="uid://5lql4qsuc1tf" path="res://assets/buttons/[6] Silver/[1] Normal.png" id="5_8rh5r"]
 [ext_resource type="Texture2D" uid="uid://pjenyrs8bnpq" path="res://assets/buttons/[6] Silver/[3] Hover.png" id="6_hhmvc"]
@@ -43,7 +44,8 @@ script = ExtResource("1_5g85c")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 2.0
+offset_top = -1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_hsqnt")
@@ -60,6 +62,21 @@ offset_bottom = -54.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_x3q6p")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -138.0
+offset_right = 68.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+texture = ExtResource("4_lk4st")
 
 [node name="Titulo" type="Label" parent="."]
 anchors_preset = 5
@@ -82,14 +99,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -31.0
-offset_top = -128.0
-offset_right = 26.0
-offset_bottom = 9.0
+offset_left = -20.0
+offset_top = -110.0
+offset_right = 37.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
 text = "2"
+horizontal_alignment = 1
 
 [node name="Confirmar" type="Button" parent="."]
 texture_filter = 1
@@ -120,10 +139,10 @@ anchor_left = 0.42
 anchor_top = 0.424
 anchor_right = 0.42
 anchor_bottom = 0.424
-offset_left = -105.6
-offset_top = -79.28
-offset_right = 7.40002
-offset_bottom = 50.72
+offset_left = -97.6
+offset_top = -72.28
+offset_right = 15.4
+offset_bottom = 44.72
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -132,7 +151,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_g5dvj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_vp2td")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_533t1")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nebkj")
-text = "<"
+text = "←"
 
 [node name="Aumenta" type="Button" parent="."]
 texture_filter = 1
@@ -141,10 +160,10 @@ anchor_left = 0.578
 anchor_top = 0.424
 anchor_right = 0.578
 anchor_bottom = 0.425
-offset_left = -5.84003
-offset_top = -79.28
-offset_right = 107.16
-offset_bottom = 50.0
+offset_left = -8.84003
+offset_top = -72.28
+offset_right = 104.16
+offset_bottom = 44.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -153,7 +172,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_g5dvj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_vp2td")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_533t1")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nebkj")
-text = ">"
+text = "→"
 
 [connection signal="pressed" from="Confirmar" to="." method="_on_confirmar_pressed"]
 [connection signal="pressed" from="Diminui" to="." method="_on_diminui_pressed"]
